@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
+            btnNhap = new Button();
             btnThoat = new Button();
             btnHuyBo = new Button();
             btnLuu = new Button();
@@ -41,6 +42,7 @@
             dataGridView = new DataGridView();
             ID = new DataGridViewTextBoxColumn();
             TenLoai = new DataGridViewTextBoxColumn();
+            btnXuat = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
@@ -48,6 +50,8 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(btnXuat);
+            groupBox1.Controls.Add(btnNhap);
             groupBox1.Controls.Add(btnThoat);
             groupBox1.Controls.Add(btnHuyBo);
             groupBox1.Controls.Add(btnLuu);
@@ -61,11 +65,21 @@
             groupBox1.Size = new Size(656, 100);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
-            groupBox1.Text = "thông tin loại sản phẩm";
+            groupBox1.Text = "Thông tin loại sản phẩm";
+            // 
+            // btnNhap
+            // 
+            btnNhap.Location = new Point(492, 55);
+            btnNhap.Name = "btnNhap";
+            btnNhap.Size = new Size(75, 23);
+            btnNhap.TabIndex = 8;
+            btnNhap.Text = "Nhập";
+            btnNhap.UseVisualStyleBackColor = true;
+            btnNhap.Click += btnNhap_Click;
             // 
             // btnThoat
             // 
-            btnThoat.Location = new Point(564, 56);
+            btnThoat.Location = new Point(411, 55);
             btnThoat.Name = "btnThoat";
             btnThoat.Size = new Size(75, 23);
             btnThoat.TabIndex = 7;
@@ -75,7 +89,7 @@
             // 
             // btnHuyBo
             // 
-            btnHuyBo.Location = new Point(483, 56);
+            btnHuyBo.Location = new Point(330, 55);
             btnHuyBo.Name = "btnHuyBo";
             btnHuyBo.Size = new Size(75, 23);
             btnHuyBo.TabIndex = 6;
@@ -86,7 +100,7 @@
             // btnLuu
             // 
             btnLuu.ForeColor = Color.Blue;
-            btnLuu.Location = new Point(402, 56);
+            btnLuu.Location = new Point(249, 55);
             btnLuu.Name = "btnLuu";
             btnLuu.Size = new Size(75, 23);
             btnLuu.TabIndex = 5;
@@ -97,7 +111,7 @@
             // btnXoa
             // 
             btnXoa.ForeColor = Color.Red;
-            btnXoa.Location = new Point(321, 56);
+            btnXoa.Location = new Point(168, 55);
             btnXoa.Name = "btnXoa";
             btnXoa.Size = new Size(75, 23);
             btnXoa.TabIndex = 4;
@@ -107,7 +121,7 @@
             // 
             // btnSua
             // 
-            btnSua.Location = new Point(240, 56);
+            btnSua.Location = new Point(87, 55);
             btnSua.Name = "btnSua";
             btnSua.Size = new Size(75, 23);
             btnSua.TabIndex = 3;
@@ -117,7 +131,7 @@
             // 
             // btnThem
             // 
-            btnThem.Location = new Point(159, 56);
+            btnThem.Location = new Point(6, 55);
             btnThem.Name = "btnThem";
             btnThem.Size = new Size(75, 23);
             btnThem.TabIndex = 2;
@@ -127,15 +141,15 @@
             // 
             // txtTenLoai
             // 
-            txtTenLoai.Location = new Point(159, 23);
+            txtTenLoai.Location = new Point(140, 23);
             txtTenLoai.Name = "txtTenLoai";
-            txtTenLoai.Size = new Size(480, 23);
+            txtTenLoai.Size = new Size(499, 23);
             txtTenLoai.TabIndex = 1;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(42, 26);
+            label1.Location = new Point(16, 26);
             label1.Name = "label1";
             label1.Size = new Size(118, 15);
             label1.TabIndex = 0;
@@ -177,6 +191,16 @@
             TenLoai.HeaderText = "Tên loại sản phẩm";
             TenLoai.Name = "TenLoai";
             // 
+            // btnXuat
+            // 
+            btnXuat.Location = new Point(573, 55);
+            btnXuat.Name = "btnXuat";
+            btnXuat.Size = new Size(75, 23);
+            btnXuat.TabIndex = 9;
+            btnXuat.Text = "Xuất";
+            btnXuat.UseVisualStyleBackColor = true;
+            btnXuat.Click += btnXuat_Click;
+            // 
             // frmLoaiSanPham
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -209,5 +233,7 @@
         private DataGridView dataGridView;
         private DataGridViewTextBoxColumn ID;
         private DataGridViewTextBoxColumn TenLoai;
+        private Button btnNhap;
+        private Button btnXuat;
     }
 }

@@ -32,6 +32,8 @@
             ID = new DataGridViewTextBoxColumn();
             TenHangSanXuat = new DataGridViewTextBoxColumn();
             groupBox1 = new GroupBox();
+            btnXuat = new Button();
+            btnNhap = new Button();
             btnThoat = new Button();
             btnHuyBo = new Button();
             btnLuu = new Button();
@@ -74,6 +76,8 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(btnXuat);
+            groupBox1.Controls.Add(btnNhap);
             groupBox1.Controls.Add(btnThoat);
             groupBox1.Controls.Add(btnHuyBo);
             groupBox1.Controls.Add(btnLuu);
@@ -89,9 +93,29 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Thông tin hãng sản xuất";
             // 
+            // btnXuat
+            // 
+            btnXuat.Location = new Point(573, 56);
+            btnXuat.Name = "btnXuat";
+            btnXuat.Size = new Size(75, 23);
+            btnXuat.TabIndex = 9;
+            btnXuat.Text = "Xuất";
+            btnXuat.UseVisualStyleBackColor = true;
+            btnXuat.Click += btnXuat_Click;
+            // 
+            // btnNhap
+            // 
+            btnNhap.Location = new Point(492, 56);
+            btnNhap.Name = "btnNhap";
+            btnNhap.Size = new Size(75, 23);
+            btnNhap.TabIndex = 8;
+            btnNhap.Text = "Nhập";
+            btnNhap.UseVisualStyleBackColor = true;
+            btnNhap.Click += btnNhap_Click;
+            // 
             // btnThoat
             // 
-            btnThoat.Location = new Point(564, 56);
+            btnThoat.Location = new Point(411, 56);
             btnThoat.Name = "btnThoat";
             btnThoat.Size = new Size(75, 23);
             btnThoat.TabIndex = 7;
@@ -101,7 +125,7 @@
             // 
             // btnHuyBo
             // 
-            btnHuyBo.Location = new Point(483, 56);
+            btnHuyBo.Location = new Point(330, 56);
             btnHuyBo.Name = "btnHuyBo";
             btnHuyBo.Size = new Size(75, 23);
             btnHuyBo.TabIndex = 6;
@@ -112,7 +136,7 @@
             // btnLuu
             // 
             btnLuu.ForeColor = Color.Blue;
-            btnLuu.Location = new Point(402, 56);
+            btnLuu.Location = new Point(249, 56);
             btnLuu.Name = "btnLuu";
             btnLuu.Size = new Size(75, 23);
             btnLuu.TabIndex = 5;
@@ -123,7 +147,7 @@
             // btnXoa
             // 
             btnXoa.ForeColor = Color.Red;
-            btnXoa.Location = new Point(321, 56);
+            btnXoa.Location = new Point(168, 56);
             btnXoa.Name = "btnXoa";
             btnXoa.Size = new Size(75, 23);
             btnXoa.TabIndex = 4;
@@ -133,7 +157,7 @@
             // 
             // btnSua
             // 
-            btnSua.Location = new Point(240, 56);
+            btnSua.Location = new Point(87, 56);
             btnSua.Name = "btnSua";
             btnSua.Size = new Size(75, 23);
             btnSua.TabIndex = 3;
@@ -143,7 +167,7 @@
             // 
             // btnThem
             // 
-            btnThem.Location = new Point(159, 56);
+            btnThem.Location = new Point(6, 56);
             btnThem.Name = "btnThem";
             btnThem.Size = new Size(75, 23);
             btnThem.TabIndex = 2;
@@ -155,7 +179,7 @@
             // 
             txtTenHangSanXuat.Location = new Point(159, 23);
             txtTenHangSanXuat.Name = "txtTenHangSanXuat";
-            txtTenHangSanXuat.Size = new Size(480, 23);
+            txtTenHangSanXuat.Size = new Size(489, 23);
             txtTenHangSanXuat.TabIndex = 1;
             // 
             // label1
@@ -209,5 +233,7 @@
         private TextBox txtTenHangSanXuat;
         private Label label1;
         private GroupBox groupBox2;
+        private Button btnXuat;
+        private Button btnNhap;
     }
 }

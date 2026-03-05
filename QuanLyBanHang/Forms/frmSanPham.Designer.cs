@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             groupBox1 = new GroupBox();
+            btnXoayAnh = new Button();
             btnDoiAnh = new Button();
             btnXuat = new Button();
             btnNhap = new Button();
@@ -63,7 +64,6 @@
             SoLuong = new DataGridViewTextBoxColumn();
             DonGia = new DataGridViewTextBoxColumn();
             HinhAnh = new DataGridViewImageColumn();
-            btnXoayAnh = new Button();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picHinhAnh).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numDonGia).BeginInit();
@@ -105,6 +105,16 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Thông tin sản phẩm";
             // 
+            // btnXoayAnh
+            // 
+            btnXoayAnh.Location = new Point(679, 54);
+            btnXoayAnh.Name = "btnXoayAnh";
+            btnXoayAnh.Size = new Size(75, 23);
+            btnXoayAnh.TabIndex = 22;
+            btnXoayAnh.Text = "Xoay ảnh";
+            btnXoayAnh.UseVisualStyleBackColor = true;
+            btnXoayAnh.Click += btnXoayAnh_Click;
+            // 
             // btnDoiAnh
             // 
             btnDoiAnh.Location = new Point(679, 18);
@@ -123,6 +133,7 @@
             btnXuat.TabIndex = 21;
             btnXuat.Text = "Xuất...";
             btnXuat.UseVisualStyleBackColor = true;
+            btnXuat.Click += btnXuat_Click;
             // 
             // btnNhap
             // 
@@ -132,6 +143,7 @@
             btnNhap.TabIndex = 20;
             btnNhap.Text = "Nhập...";
             btnNhap.UseVisualStyleBackColor = true;
+            btnNhap.Click += btnNhap_Click;
             // 
             // btnTimKiem
             // 
@@ -364,18 +376,18 @@
             // SoLuong
             // 
             SoLuong.DataPropertyName = "SoLuong";
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle3.Format = "N0";
-            SoLuong.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle1.Format = "N0";
+            SoLuong.DefaultCellStyle = dataGridViewCellStyle1;
             SoLuong.HeaderText = "Số lượng";
             SoLuong.Name = "SoLuong";
             // 
             // DonGia
             // 
             DonGia.DataPropertyName = "DonGia";
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle4.Format = "N0";
-            DonGia.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.Format = "N0";
+            DonGia.DefaultCellStyle = dataGridViewCellStyle2;
             DonGia.HeaderText = "Đơn giá";
             DonGia.Name = "DonGia";
             // 
@@ -384,16 +396,6 @@
             HinhAnh.DataPropertyName = "HinhAnh";
             HinhAnh.HeaderText = "Hình ảnh";
             HinhAnh.Name = "HinhAnh";
-            // 
-            // btnXoayAnh
-            // 
-            btnXoayAnh.Location = new Point(679, 54);
-            btnXoayAnh.Name = "btnXoayAnh";
-            btnXoayAnh.Size = new Size(75, 23);
-            btnXoayAnh.TabIndex = 22;
-            btnXoayAnh.Text = "Xoay ảnh";
-            btnXoayAnh.UseVisualStyleBackColor = true;
-            btnXoayAnh.Click += btnXoayAnh_Click;
             // 
             // frmSanPham
             // 

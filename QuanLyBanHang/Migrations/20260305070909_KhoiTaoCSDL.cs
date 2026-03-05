@@ -15,13 +15,13 @@ namespace QuanLyBanHang.Migrations
                 name: "HangSanXuat",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
+                    ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     TenHangSanXuat = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_HangSanXuat", x => x.Id);
+                    table.PrimaryKey("PK_HangSanXuat", x => x.ID);
                 });
 
             migrationBuilder.CreateTable(
@@ -43,13 +43,13 @@ namespace QuanLyBanHang.Migrations
                 name: "LoaiSanPham",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
+                    ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     TenLoai = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_LoaiSanPham", x => x.Id);
+                    table.PrimaryKey("PK_LoaiSanPham", x => x.ID);
                 });
 
             migrationBuilder.CreateTable(
@@ -91,13 +91,13 @@ namespace QuanLyBanHang.Migrations
                         name: "FK_SanPham_HangSanXuat_HangSanXuatID",
                         column: x => x.HangSanXuatID,
                         principalTable: "HangSanXuat",
-                        principalColumn: "Id",
+                        principalColumn: "ID",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_SanPham_LoaiSanPham_LoaiSanPhamID",
                         column: x => x.LoaiSanPhamID,
                         principalTable: "LoaiSanPham",
-                        principalColumn: "Id",
+                        principalColumn: "ID",
                         onDelete: ReferentialAction.Cascade);
                 });
 
