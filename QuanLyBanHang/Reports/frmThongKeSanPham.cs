@@ -1,15 +1,11 @@
-﻿using QuanLyBanHang.Data;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System;
 using System.ComponentModel.Design;
 using System.Data;
-using System.Drawing;
+using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Microsoft.Reporting.WinForms;
+using QuanLyBanHang.Data;
 namespace QuanLyBanHang.Reports
 {
     public partial class frmThongKeSanPham : Form
@@ -51,10 +47,10 @@ namespace QuanLyBanHang.Reports
                 row.HinhAnh,
                 row.MoTa);
             }
-            /*ReportDataSource reportDataSource = new ReportDataSource();
+            ReportDataSource reportDataSource = new ReportDataSource();
             reportDataSource.Name = "DanhSachSanPham";
             reportDataSource.Value = danhSachSanPhamDataTable;
-            reportViewer.LocalReport.DataSources.Clear();
+            /*reportViewer.LocalReport.DataSources.Clear();
             reportViewer.LocalReport.DataSources.Add(reportDataSource);
             reportViewer.LocalReport.ReportPath = Path.Combine(reportsFolder, "rptThongKeSanPham.rdlc");
             reportViewer.SetDisplayMode(DisplayMode.PrintLayout);
