@@ -90,17 +90,16 @@ namespace QuanLyBanHang.Forms
             {
                 if (e.Value == null || string.IsNullOrEmpty(e.Value.ToString()))
                 {
-                    // Nếu không có tên file, gán một ảnh mặc định
-                    e.Value = @"Z:\LAPTRINHQUANLY_BUOITH2\...\hinhanh.jpg";
+                    e.Value = Path.Combine(Application.StartupPath, "no-image.jpg");
                 }
                 else
                 {
-                    // Kiểm tra kỹ e.Value trước khi ToString
                     string fileName = e.Value.ToString();
                     e.Value = Path.Combine(imagesFolder, fileName);
+
+
                 }
-
-
+               
             };
             picHinhAnh.DataBindings.Add(hinhAnh);
             dataGridView.DataSource = bindingSource;
@@ -112,7 +111,7 @@ namespace QuanLyBanHang.Forms
             {
                 if (e.Value == null)
                 {
-                    e.Value = @"Z:\LAPTRINHQUANLY_BUOITH2\QuanLyBanHang\bin\Debug\net8.0-windows\hinhanh.jpg";
+                    e.Value = Path.Combine(Application.StartupPath, "no-image.jpg");
                 }
                 Image image = Image.FromFile(Path.Combine(imagesFolder, e.Value.ToString()));
                 image = new Bitmap(image, 24, 24);
@@ -178,8 +177,7 @@ namespace QuanLyBanHang.Forms
                     sp.TenSanPham = txtTenSanPham.Text;
                     sp.SoLuong = (int)numSoLuong.Value;
                     sp.DonGia = (int)numDonGia.Value;
-                    sp.HinhAnh = (string.IsNullOrEmpty(picHinhAnh.ImageLocation)
-                        ? picHinhAnh.ImageLocation.ToString() : null);
+                    sp.HinhAnh = "no-image.jpg";
                     context.SanPham.Add(sp);
                     context.SaveChanges();
 
