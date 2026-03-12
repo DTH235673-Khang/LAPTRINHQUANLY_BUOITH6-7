@@ -46,6 +46,14 @@ namespace QuanLyBanHang.Forms
                 loaiSanPham.TopLevel = false;
                 loaiSanPham.FormBorderStyle = FormBorderStyle.None;
                 loaiSanPham.Dock = DockStyle.Fill;
+                foreach(Control ctrl in  loaiSanPham.Controls)
+                {
+                    ctrl.Anchor=AnchorStyles.Left|AnchorStyles.Top|AnchorStyles.Right;
+                    foreach (Control c in ctrl.Controls)
+                    {
+                        c.Anchor = AnchorStyles.Left | AnchorStyles.Top ;
+                    }
+                }
                 loaiSanPham.Show();
             }
             else
@@ -60,7 +68,10 @@ namespace QuanLyBanHang.Forms
                 hangSanXuat.MdiParent = this;
                 hangSanXuat.FormBorderStyle = FormBorderStyle.None;
                 hangSanXuat.Dock = DockStyle.Fill;
-              
+                foreach (Control ctrl in hangSanXuat.Controls)
+                {
+                    ctrl.Anchor = AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Right;
+                }
                 hangSanXuat.Show();
             }
             else
@@ -75,6 +86,10 @@ namespace QuanLyBanHang.Forms
                 sanPham.MdiParent = this;
                 sanPham.FormBorderStyle = FormBorderStyle.None;
                 sanPham.Dock = DockStyle.Fill;
+                foreach (Control ctrl in sanPham.Controls)
+                {
+                    ctrl.Anchor = AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Right;
+                }
                 sanPham.Show();
             }
             else
@@ -89,7 +104,10 @@ namespace QuanLyBanHang.Forms
                 khachHang.MdiParent = this;
                 khachHang.FormBorderStyle = FormBorderStyle.None;
                 khachHang.Dock = DockStyle.Fill;
-               
+                foreach (Control ctrl in khachHang.Controls)
+                {
+                    ctrl.Anchor = AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Right;
+                }
                 khachHang.Show();
             }
             else
@@ -104,7 +122,10 @@ namespace QuanLyBanHang.Forms
                 nhanVien.MdiParent = this;
                 nhanVien.FormBorderStyle = FormBorderStyle.None;
                 nhanVien.Dock = DockStyle.Fill;
-               
+                foreach (Control ctrl in nhanVien.Controls)
+                {
+                    ctrl.Anchor = AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Right;
+                }
                 nhanVien.Show();
             }
             else
@@ -119,7 +140,11 @@ namespace QuanLyBanHang.Forms
                 hoaDon.MdiParent = this;
                 hoaDon.FormBorderStyle = FormBorderStyle.None;
                 hoaDon.Dock = DockStyle.Fill;
-               
+                foreach (Control ctrl in hoaDon.Controls)
+                {
+                    if(!(ctrl is Button))
+                        ctrl.Anchor = AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Right;
+                }
                 hoaDon.Show();
             }
             else
